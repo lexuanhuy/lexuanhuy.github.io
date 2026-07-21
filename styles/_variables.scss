@@ -1,0 +1,24 @@
+$background: #0f172a;
+$foreground: #ffffff;
+
+/* --- NỀN CƠ BẢN (Deep Dark Backgrounds) --- */
+$bg-dark: #050505; /* Nền gần như đen tuyệt đối */
+$bg-surface: #121212; /* Nền cho các card, panel */
+$bg-panel: #1a1a1a; /* Nền cho các sidebar, header */
+
+/* --- CÁC MÀU NEON CHỦ ĐẠO (The Lights) --- */
+$neon-cyan: #00f0ff; /* Màu chính */
+$neon-pink: #ff00ff; /* Màu nhấn */
+$neon-green: #39ff14; /* Màu cho thông báo/system */
+$neon-yellow: #ffff00; /* Màu cho cảnh báo */
+
+/* --- MÀU CHỮ (Typography) --- */
+$text-primary: #ffffff; /* Chữ trắng tinh cho nội dung quan trọng */
+$text-secondary: #b0b0b0; /* Chữ xám cho nội dung phụ */
+$text-glow-cyan: 0 0 10px rgba(0, 240, 255, 0.5); /* Hiệu ứng glow nhẹ cho chữ */
+
+/* --- BORDER & SHADOW (The Structure) --- */
+$border-cyan: 1px solid $neon-cyan;
+$border-pink: 1px solid $neon-pink;
+$shadow-neon-cyan: 0 0 15px rgba(0, 240, 255, 0.3);
+$shadow-neon-pink: 0 0 15px rgba(255, 0, 255, 0.3);

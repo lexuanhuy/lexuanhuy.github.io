@@ -1,0 +1,9 @@
+.footerNavbar {
+    position: absolute;
+    bottom: 5px;
+    left: calc(50% + 20px);
+    width: 50%;
+    border-top: 1px solid var(--neon-cyan);
+    padding-top: 5px;
+    padding-left: 20px;
+}

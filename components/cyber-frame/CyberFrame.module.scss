@@ -1,0 +1,105 @@
+@import "../../styles/variables";
+
+$wrapperClipWidth: 15px;
+$wrapperBorderWidth: 29px;
+$contentClipWidth: 15px;
+$contentBorderWidth: 30px;
+
+.cyber-wrapper-box {
+  background-color: $neon-cyan;
+  padding: 5px;
+  display: flex;
+  position: relative;
+  height: 100%;
+
+  clip-path: polygon(
+    $wrapperClipWidth 0%,
+    calc(100% - $wrapperClipWidth) 0%,
+    100% $wrapperClipWidth,
+    100% calc(100% - $wrapperClipWidth),
+    calc(100% - $wrapperClipWidth) 100%,
+    $wrapperClipWidth 100%,
+    0% calc(100% - $wrapperClipWidth),
+    0% $wrapperClipWidth
+  );
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: calc(35% - 15px);
+    border: $wrapperBorderWidth solid transparent;
+  }
+  &::before {
+    top: 0;
+    left: calc(50% + 5px);
+    border-top: $wrapperBorderWidth solid $background;
+  }
+
+  &::after {
+    bottom: 0;
+    right: calc(50% + 5px);
+    border-bottom: $wrapperBorderWidth solid $background;
+  }
+}
+
+.cyber-content-box {
+  width: 100%;
+  background-color: $background;
+  padding: 20px;
+  position: relative;
+  clip-path: polygon(
+    $contentClipWidth 0%,
+    calc(100% - $contentClipWidth) 0%,
+    100% $contentClipWidth,
+    100% calc(100% - $contentClipWidth),
+    calc(100% - $contentClipWidth) 100%,
+    $contentClipWidth 100%,
+    0% calc(100% - $contentClipWidth),
+    0% $contentClipWidth
+  );
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    border: $contentBorderWidth solid transparent;
+  }
+
+  &::before {
+    border-top: $contentBorderWidth solid $neon-cyan;
+    top: -1px;
+    left: 50%;
+  }
+
+  &::after {
+    border-bottom: $contentBorderWidth solid $neon-cyan;
+    bottom: -1px;
+    right: 50%;
+  }
+}
+
+.css-blurry-gradient-blue {
+  background: radial-gradient(circle at 50% 50%, #43d9ad, rgba(76, 0, 255, 0));
+  border-radius: 100% 0 0;
+  filter: blur(100px);
+  height: 400px;
+  opacity: 0.5;
+  position: fixed;
+  right: 35%;
+  rotate: 20deg;
+  top: 10%;
+  width: 400px;
+}
+.css-blurry-gradient-green {
+  border-radius: 100% 50% 100% 0;
+  bottom: 10%;
+  height: 500px;
+  opacity: 0.7;
+  position: fixed;
+  right: 10%;
+  width: 500px;
+  filter: blur(70px);
+  background: radial-gradient(circle at 50% 50%, #4d5bce, rgba(76, 0, 255, 0));
+}

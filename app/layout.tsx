@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import localFont from 'next/font/local';
+import "./globals.scss";
+import { Navbar } from "@/components/navbar/Navbar";
+import { FooterNavbar } from "@/components/footer-navbar/FooterNavbar";
+import { CyberFrame } from "@/components/cyber-frame/CyberFrame";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +14,18 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const orbitron = localFont({
+  src: '../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf',
+  variable: '--font-orbitron',
+  display: 'swap',
+});
+
+const firaCode = localFont({
+  src: '../public/fonts/Fira_Code/FiraCode-VariableFont_wght.ttf',
+  variable: '--font-firacode',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -22,12 +38,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} ${firaCode.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full h-[100vh] p-6">
+        <CyberFrame classNameContent="d-flex">
+          <Navbar />
+          <div className="flex-1 h-[90%]">{children}</div>
+          <FooterNavbar />
+        </CyberFrame>
+      </body>
     </html>
   );
 }
