@@ -1,0 +1,10 @@
+.year {
+    font-family: var(--font-orbitron);
+}
+
+.arrow {
+    width: 15px;
+    height: 12px;
+    background-color: white;
+    clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 50%, 0 0, 50% 45%);
+}

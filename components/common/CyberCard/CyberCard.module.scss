@@ -1,0 +1,53 @@
+$border-color: #fff;
+$bg-color: #0f172a;
+
+.cyberpunk-card-title {
+    color: var(--neon-cyan);
+    font-size: 16pt;
+}
+
+.cyberpunk-card-wrapper {
+    --clip-path-width: 30px;
+    position: relative;
+    background-color: $border-color;
+    padding: 1px;
+    display: flex;
+    width: 220px;
+
+    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, var(--clip-path-width) 100%, 0 calc(100% - var(--clip-path-width)));
+}
+.cyberpunk-card-wrapper::before {
+    content: "";
+    --clip-path-width: 8px;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: $bg-color;
+    clip-path: polygon(0 0, var(--clip-path-width) 0, 100% calc(100% - var(--clip-path-width)), 100% 100%);
+}
+
+.cyberpunk-card-wrapper::after {
+    content: "";
+    --clip-path-width: 8px;
+    z-index: 2;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    background-color: $bg-color;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.cyberpunk-card-content {
+    --clip-path-width-2: 15px;
+    background-color: $bg-color;
+    text-align: center;
+    color: #fff;
+    padding: 16px;
+
+    clip-path: polygon(var(--clip-path-width-2) 0%, calc(100% - var(--clip-path-width)) 0%, 100% var(--clip-path-width), 100% calc(100% - var(--clip-path-width-2)), calc(100% - var(--clip-path-width-2)) 100%, var(--clip-path-width) 100%, 0% calc(100% - var(--clip-path-width)), 0% var(--clip-path-width-2));
+}
