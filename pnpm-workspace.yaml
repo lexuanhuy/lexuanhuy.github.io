@@ -1,9 +1,6 @@
-ignoredBuiltDependencies:
-  - sharp
-  - unrs-resolver
-  - parcel/watcher
-
 onlyBuiltDependencies:
-  - '@parcel/watcher'
+  - sharp
+  - "@parcel/watcher"
+  - unrs-resolver
 
 minimumReleaseAge: 0
