@@ -1,0 +1,30 @@
+.tag {
+    display: inline-block;
+    background-color: rgba(0, 240, 255, .2);
+    padding: 6px 18px;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border: 1px solid var(--neon-cyan);
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border: 1px solid var(--neon-cyan);
+        border-top-color: transparent;
+        border-left-color: transparent;
+    }
+}

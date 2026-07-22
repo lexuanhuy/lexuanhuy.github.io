@@ -1,0 +1,45 @@
+$clippathWidth: 15px;
+$background: #0f172a;
+$clippathWidth: 10px;
+
+.frameWrapper {
+  z-index: 2;
+  background-color: var(--neon-cyan);
+  padding: 2px;
+
+  clip-path: polygon(0 0, calc(100% - $clippathWidth) 0, 100% $clippathWidth, 100% 100%, $clippathWidth 100%, 0 calc(100% - $clippathWidth));
+}
+
+.frameContent {
+  background-color: $background;
+  padding: 16px;
+  padding-left: 20px;
+  position: relative;
+  padding-top: 50px;
+  clip-path: polygon(0 0, calc(100% - $clippathWidth) 0, 100% $clippathWidth, 100% 100%, $clippathWidth 100%, 0 calc(100% - $clippathWidth));
+
+  .frameTitle {
+    position: absolute;
+    text-transform: uppercase;
+    z-index: 1;
+    top: -1px;
+    left: 0;
+    padding: 4px 8px;
+    padding-right: 40px;
+    color: $background;
+    font-weight: bold;
+    background-color: var(--neon-cyan);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 30px) 100%, 0 100%);
+  }
+
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     bottom: 0;
+  //     left: 0;
+  //     height: 70%;
+  //     width: 20px;
+  //     background-color: var(--neon-cyan);
+  //     clip-path: polygon(0 0, 100% 20px, 100% 100%, 0 100%);
+  //   }
+}

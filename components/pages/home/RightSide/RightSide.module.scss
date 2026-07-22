@@ -1,0 +1,31 @@
+.list {
+  position: relative;
+  padding-left: 22px;
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-left: 2px solid var(--neon-cyan);
+  }
+
+  &::after {
+    top: -20px;
+  }
+
+  .listItem {
+    position: relative;
+    padding: 10px;
+    border: 2px solid var(--neon-cyan);
+    margin-bottom: 12px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -22px;
+      top: 50%;
+      width: 20px;
+      border-top: 2px solid var(--neon-cyan);
+    }
+  }
+}

@@ -1,9 +1,27 @@
 .footerNavbar {
+  position: absolute;
+  bottom: 5px;
+  left: calc(50% + 20px);
+  width: 50%;
+  padding-top: 5px;
+  padding-left: 20px;
+
+  &::before {
+    content: "";
     position: absolute;
-    bottom: 5px;
-    left: calc(50% + 20px);
-    width: 50%;
+    top: 0;
+    left: 20px; /* Khớp với padding-left của container để đường viền bắt đầu đúng chỗ */
+    width: 0;   /* Bắt đầu bằng 0 để chuẩn bị "fill" ra */
+    height: 1px;
     border-top: 1px solid var(--neon-cyan);
-    padding-top: 5px;
-    padding-left: 20px;
+    
+    /* Khai báo hiệu ứng transition ở đây để nó mượt khi thay đổi width */
+    transition: width 1.4s ease-in-out;
+    transition-delay: 0.2s; /* Tùy chọn: độ trễ trước khi chạy */
+  }
+
+  /* Khi thêm class này (hoặc khi hover), đường viền sẽ tự động chạy dài ra */
+  &.footerNavbarBorder::before {
+    width: calc(100% - 20px);
+  }
 }
