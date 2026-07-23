@@ -16,9 +16,10 @@
 
   .listItem {
     position: relative;
-    padding: 10px;
-    border: 2px solid var(--neon-cyan);
+    // padding: 10px;
+    // border: 2px solid var(--neon-cyan);
     margin-bottom: 12px;
+    
     &::before {
       content: "";
       position: absolute;

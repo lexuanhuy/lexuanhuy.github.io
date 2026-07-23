@@ -1,0 +1,28 @@
+$clippathWidth: 20px;
+$background: #0f172a;
+$polygonClipPath: polygon(
+  $clippathWidth 0,
+  100% 0,
+  100% 100%,
+  0 100%,
+  0 $clippathWidth
+);
+
+.listFrameWrapper {
+  padding: 2px;
+  background-color: var(--neon-cyan);
+  position: relative;
+  left: -2px;
+
+  clip-path: $polygonClipPath;
+
+  .listFrameContent {
+    background-color: rgba(15, 23, 42, 0.8);
+    padding: 8px 12px;
+    padding-left: 32px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    clip-path: $polygonClipPath;
+  }
+}

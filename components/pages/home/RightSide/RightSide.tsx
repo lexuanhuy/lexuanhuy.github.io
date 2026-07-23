@@ -1,4 +1,5 @@
 import { Frame } from "./Frame";
+import { ListFrame } from "./ListFrame";
 import styles from "./RightSide.module.scss";
 import { Tag } from "./Tag";
 
@@ -24,14 +25,10 @@ export const RightSide = ({ className }: { className?: string }) => {
             </Frame>
             <Frame className="w-[75%] mb-4" title="Stats">
                 <ul className={styles.list}>
-                    <li className={styles.listItem}>EXPERIENCE: 6 years</li>
-                </ul>
-            </Frame>
-            <Frame className="w-[75%] mb-4" title="Misson">
-                <ul className={styles.list}>
-                    <li className={styles.listItem}>Status: ONLINE & READY FOR HIRE</li>
-                    <li className={styles.listItem}>Current Focus: Learning new skills</li>
-                    <li className={styles.listItem}>Target: Looking for Frontend Developer opportunities</li>
+                    <li className={styles.listItem}><ListFrame>Experience: 6 years</ListFrame></li>
+                    <li className={styles.listItem}><ListFrame>Status: READY FOR HIRE</ListFrame></li>
+                    <li className={styles.listItem}><ListFrame>Current Focus: Learning new skills</ListFrame></li>
+                    {/* <li className={styles.listItem}><ListFrame>Target: Looking for Frontend Developer opportunities</ListFrame></li> */}
                 </ul>
             </Frame>
         </div>
