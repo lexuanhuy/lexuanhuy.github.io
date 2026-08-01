@@ -9,7 +9,7 @@ export const LeftSide = ({ className }: { className?: string }) => {
                     <div className="text-[18px]">Hi, I am</div>
                     <div className="text-[58px]">Le Xuan Huy</div>
                     <div className="text-[32px] text-[#4d5bce] py-2 d-flex">
-                        {`>`}<TypeWriter words={["Front-end developer"]} />
+                        {`>`}<TypeWriter words={["Front-end developer", "Software Engineer"]} />
                     </div>
                 </div>
                 <div className="font-semibold">

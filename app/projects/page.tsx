@@ -21,8 +21,8 @@ const projects: Array<ProjectData> = [
 ]
 
 export default function ProjectPage() {
-    return <div className="h-full flex justify-center items-center font-(family-name:--font-orbitron) overflow-auto">
-        <div className="flex flex-wrap gap-12 justify-center">
+    return <div className="h-full flex py-16 px-4 font-(family-name:--font-orbitron) overflow-auto">
+        <div className="w-full flex flex-wrap items-start gap-12">
             {
                 projects?.map(({ title, icon, description, githubLink }) => {
                     return (

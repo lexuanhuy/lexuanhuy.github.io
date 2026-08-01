@@ -45,9 +45,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} ${firaCode.variable} h-full antialiased`}
     >
       <body className="min-h-full h-[100vh] p-6">
-        <CyberFrame classNameContent="d-flex">
+        <CyberFrame classNameContent="flex">
           <Navbar />
-          <div className="flex-1 h-[90%]">{children}</div>
+          <div className="flex-1">{children}</div>
           <FooterNavbar />
         </CyberFrame>
       </body>

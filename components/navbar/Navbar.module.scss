@@ -3,11 +3,11 @@ $navbarBtnClipLeft: polygon($navbarBtnClipWidth 0%, 100% 0%, calc(100% - $navbar
 $navbarBtnClipRight: polygon(0% 0%, calc(100% - $navbarBtnClipWidth) 0%, 100% 100%, calc($navbarBtnClipWidth - 2px) 100%);
 
 .navbar {
-  position: relative;
+  position: absolute;
   display: inline-block;
   text-align: right;
   width: 50%;
-  top: -15px;
+  top: 5px;
   left: calc(50% - 20px);
   transform: translateX(-100%);
   border-bottom: 1px solid var(--neon-cyan);
