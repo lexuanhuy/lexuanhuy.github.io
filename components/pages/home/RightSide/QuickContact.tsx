@@ -1,13 +1,11 @@
-export default function QuickContact({className}: {className?: string}) {
+export default function QuickContact({ className }: { className?: string }) {
   return (
     <div className={`relative p-5 bg-[#080c14]/80 border border-[#00f0ff]/45 rounded-sm backdrop-blur-md shadow-[0_0_15px_rgba(0,240,255,0.15)] ${className}`}>
-      {/* Góc trang trí kiểu HUD sci-fi */}
       <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-[#00f0ff]"></div>
       <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-[#00f0ff]"></div>
       <div className="absolute bottom-0 left-0 w-2 h-2 border-b-2 border-l-2 border-[#00f0ff]"></div>
       <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-[#00f0ff]"></div>
 
-      {/* Tiêu đề module */}
       <div className="flex items-center justify-between mb-4 pb-2 border-b border-[#00f0ff]/20">
         <span className="font-mono text-xs uppercase tracking-widest text-[#00f0ff] font-bold">
           {'// QUICK_CONTACT'}
@@ -18,7 +16,6 @@ export default function QuickContact({className}: {className?: string}) {
         </span>
       </div>
 
-      {/* Nội dung dạng biến code */}
       <div className="space-y-2.5 font-mono text-xs text-slate-300">
         <div className="flex flex-col sm:flex-row sm:items-center gap-1">
           <span className="text-purple-400">const</span>
@@ -38,8 +35,8 @@ export default function QuickContact({className}: {className?: string}) {
           <span className="text-purple-400">const</span>
           <span className="text-[#00f0ff]">email</span>
           <span className="text-slate-500">=</span>
-          <a 
-            href="mailto:lexuanhuy1994@gmail.com" 
+          <a
+            href="mailto:lexuanhuy1994@gmail.com"
             className="text-pink-400 hover:underline truncate"
           >
             {`"lexuanhuy1994@gmail.com"`}
@@ -49,8 +46,8 @@ export default function QuickContact({className}: {className?: string}) {
           <span className="text-purple-400">const</span>
           <span className="text-[#00f0ff]">phone</span>
           <span className="text-slate-500">=</span>
-          <a 
-            href="tel:+84977221643" 
+          <a
+            href="tel:+84977221643"
             className="text-amber-400 hover:underline truncate"
           >
             {`"+84 977 221 643"`}
@@ -58,7 +55,6 @@ export default function QuickContact({className}: {className?: string}) {
         </div>
       </div>
 
-      {/* Nút hành động nhanh (Call to Action) */}
       <div className="mt-5 pt-3 border-t border-[#00f0ff]/20 flex items-center justify-between">
         <span className="text-[10px] font-mono text-slate-400">
           * Drop a message to connect
